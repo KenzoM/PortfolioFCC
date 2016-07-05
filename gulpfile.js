@@ -43,24 +43,25 @@ gulp.task('images', function(){
 gulp.task('resize', function () {
   gulp.src('app/images_src/**/*')
     .pipe(imageResize({
-      width : 800,
-      height : 600,
+      width : 70,
+      height : 70,
       upscale : false,
       imageMagick: true
     }))
-    .pipe(rename(function (path) { path.basename += "-800"; }))
-    .pipe(gulp.dest('app/dist/kenzo'));
+    .pipe(rename(function (path) { path.basename += "-70"; }))
+    .pipe(gulp.dest('app/images_src'));
 });
 
-gulp.task('kenzo', function() {
+gulp.task('small-resize', function() {
   gulp.src('app/images_src/*')
     .pipe(imageResize({
-      width: 500,
+      width: 70,
+      height: 70,
       imageMagick: true
     }))
     .pipe(imagemin({
       progressive: true
     }))
-    .pipe(rename(function (path) { path.basename += "-500"; }))
-    .pipe(gulp.dest('app/dist/kenzo'))
+    .pipe(rename(function (path) { path.basename += "-small"; }))
+    .pipe(gulp.dest('app/images_src'))
 });
