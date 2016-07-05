@@ -6,6 +6,9 @@ body {
   box-sizing: border-box;
   width: 100%; }
 
+p {
+  text-align: center; }
+
 header {
   max-width: 100vw;
   display: flex;
@@ -30,21 +33,64 @@ main {
   flex-wrap: wrap; }
 
 .biography {
-  width: 100%;
-  height: 100px;
-  background: blue; }
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+
+.description {
+  width: 100%; }
+
+img {
+  max-width: 100%; }
+
+.biography h1 {
+  text-align: center; }
 
 .portfolio {
   width: 100%;
-  height: 100px;
-  background: orange; }
+  height: 100%; }
+
+.portfolio h2 {
+  text-align: center; }
+
+.title {
+  width: 100%; }
+
+.skills {
+  width: 100%;
+  height: 100%; }
+
+.skills h2 {
+  text-align: center; }
+
+table {
+  margin: 0 auto;
+  width: 100%; }
+
+th, td {
+  vertical-align: middle;
+  text-align: center;
+  max-width: 100%; }
 
 address {
   width: 100%;
-  height: 100px;
-  background: green; }
+  height: 100%;
+  background: skyblue; }
+
+address h2 {
+  text-align: center; }
+
+.social-media-buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 50px; }
+
+.social-icons {
+  margin: 0 auto; }
 
 footer {
   width: 100%;
-  height: 100px;
+  height: 100%;
   background: gray; }
