@@ -1,0 +1,59 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Asap', sans-serif;
+  background: #F3F3EA;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+header{
+  max-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo{
+  position: relative;
+  top:2px;
+  width: 50%;
+  font-size: 48px;
+}
+
+#bars{
+  width: 50%;
+  text-align: right;
+  font-size: 48px;
+  position: relative;
+  top: 2px;
+  padding-right: 0.3em;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.biography{
+  width: 100%;
+  height: 100px;
+  background: blue;
+}
+
+.portfolio{
+  width: 100%;
+  height: 100px;
+  background: orange;
+}
+
+address{
+  width: 100%;
+  height:100px;
+  background: green;
+}
+
+footer{
+  width: 100%;
+  height:100px;
+  background: gray;
+}
