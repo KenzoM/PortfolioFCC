@@ -12,9 +12,20 @@
 </head>
   <body>
     <header>
-      <i id="bars" class="fa fa-bars" aria-hidden="true"></i>
-      <nav></nav>
+      <a id="menu">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
     </header>
+
+    <nav id="drawer" class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#">News</a></li>
+        <li class="nav__item"><a href="#">Events</a></li>
+        <li class="nav__item"><a href="#">Culture</a></li>
+        <li class="nav__item"><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+
     <main>
       <div class="landing-page">
         <div class="description">
@@ -127,5 +138,22 @@
         </div>
       </footer>
     </main>
+    <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.nav');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
   </body>
 </html>
