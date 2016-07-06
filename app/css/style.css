@@ -12,13 +12,8 @@ header {
   max-width: 100vw;
   display: flex;
   justify-content: space-between; }
-  header #logo {
-    position: relative;
-    top: 2px;
-    width: 50%;
-    font-size: 48px; }
   header #bars {
-    width: 50%;
+    width: 100%;
     text-align: right;
     font-size: 48px;
     position: relative;
@@ -62,7 +57,10 @@ main {
     font-size: 100px; }
     #skills table th, #skills table td {
       vertical-align: middle;
-      text-align: center; }
+      text-align: center;
+      transition: color 1s ease-out; }
+    #skills table td:hover {
+      color: black; }
 
 .portfolio {
   color: #22181C;
@@ -75,12 +73,15 @@ main {
   .portfolio table {
     margin: 0 auto;
     width: 100%; }
+    .portfolio table caption {
+      margin-bottom: 10px; }
     .portfolio table th, .portfolio table td {
       vertical-align: middle;
       text-align: center;
-      max-width: 100%; }
+      border: 1px solid black; }
       .portfolio table th img, .portfolio table td img {
-        max-width: 100%; }
+        width: 150px;
+        height: 150px; }
 
 .title {
   width: 100%; }
@@ -101,9 +102,13 @@ address {
     vertical-align: middle;
     text-decoration: none; }
   address .email {
-    font-size: 40px; }
+    margin-top: -30px;
+    font-size: 40px;
+    transition: color 1s ease-out; }
     address .email .fa {
       vertical-align: middle; }
+  address .email:hover {
+    color: #8F90DD; }
 
 footer {
   width: 100%;
