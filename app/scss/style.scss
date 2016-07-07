@@ -68,7 +68,7 @@ main{
 
 
 
-.landing-page{
+#landing-page{
   position: relative;
   background-color: #96C0B7;
   text-align: center;
@@ -110,13 +110,16 @@ main{
   table{
     margin: 0 auto;
     width: 100%;
-    font-size: 100px;
     th, td{
-      // border: solid black 1px;
+      border: solid black 1px;
       width: 50%;
+      padding-top: 15px;
       vertical-align: middle;
       text-align: center;
       transition: color 1s ease-out;
+      .fa{
+        font-size: 50px;
+      }
     }
     td:hover{
       color: black;
@@ -139,6 +142,8 @@ main{
     }
     a{
       color:inherit;
+      display:block;
+      text-decoration: none;
     }
     th, td{
       vertical-align: middle;
@@ -146,7 +151,7 @@ main{
       width: 50%;
       padding-top: 15px;
       border: 1px solid black;
-      transition: color 0.5s ease-out;
+      transition: color, background 0.5s ease-out;
       .fa{
         font-size: 50px;
       }
@@ -226,8 +231,8 @@ footer{
   }
 }
 
-@media screen and (min-width: 640px) {
-  .landing-page{
+@media screen and (min-width: 640px) and (max-width: 799px) {
+  #landing-page{
     .description, .checkout{
       width: 100%;
       font-size: 26px;
@@ -240,11 +245,23 @@ footer{
     picture{
       width: 100%;
     }
+    img{
+      max-width: 100%;
+    }
   }
   #skills, #portfolio, #about{
     font-size: 25px;
   }
 
+  #skills, #portfolio{
+    table{
+      th, td{
+        .fa{
+          font-size: 77px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -276,8 +293,34 @@ footer{
     // padding-top: 5%;
     flex-grow: 1;
   }
+  #landing-page{
+    padding-top: 13px;
+    .description, .checkout{
+      font-size: 22px;
+    }
+    .arrow{
+      font-size: 130px;
+    }
+    img{
+      max-width:100%;
+    }
+  }
   #skills, #portfolio{
     font-size: 45px;
+  }
+  #skills, #portfolio{
+    table{
+      width:75%;
+    }
+  }
+  #skills, #portfolio{
+    table{
+      th, td{
+        .fa{
+          font-size: 89px;
+        }
+      }
+    }
   }
   #about{
     font-size: 30px;

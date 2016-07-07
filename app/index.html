@@ -19,7 +19,7 @@
 
     <nav id="drawer" class="nav">
       <ul id="menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="#landing-page">Home</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#about">About</a></li>
@@ -27,36 +27,44 @@
     </nav>
 
     <main>
-      <div class="landing-page">
+      <div id="landing-page">
         <div class="description">
           <h1>Hello! I'm Kenzo</h1>
           <h3>I am self-taught programmer as well as a passionate musician and world traveler
           </h3>
         </div>
         <picture>
+          <source srcset="images_src/logo-portfolio.svg" media="(min-width: 800px)">
+          <source srcset="images_src/music-computer.svg" media="(min-width: 640px)">
           <img src="images_src/music-computer.svg" alt="icon">
         </picture>
         <div class="checkout">
-          <h3>Learn more about me</h3>
+          <h3>Check out what I've done!</h3>
           <a href="#skills"><i class="fa  arrow fa-arrow-circle-down" aria-hidden="true"></i></a>
         </div>
-
       </div>
+
       <div id="skills">
         <h2>Skills</h2>
         <table>
           <tbody>
             <tr>
-              <td><i class="fa fa-html5" aria-hidden="true"></i></td>
-              <td><i class="fa fa-css3" aria-hidden="true"></i></td>
+              <td><i class="fa fa-html5" aria-hidden="true"></i>
+              <p>HTML5</p></td>
+              <td><i class="fa fa-css3" aria-hidden="true"></i>
+              <p>CSS3</p></td>
             </tr>
             <tr>
-              <td><i class="icon-javascript"></i></td>
-              <td><i class="icon-ruby"></i><td>
+              <td><i class="fa icon-javascript"></i>
+              <p>JavaScript</p></td>
+              <td><i class="fa icon-ruby"></i>
+                <p>Ruby</p></td>
             </tr>
             <tr>
-              <td><i class="icon-nodejs"></i></td>
-              <td><i class="icon-postgres"></i></td>
+              <td><i class="fa icon-nodejs"></i>
+              <p>Node.js</p></td>
+              <td><i class="fa icon-postgres"></i>
+              <p>PostSQL</p></td>
             </tr>
           </tbody>
         </table>
@@ -69,35 +77,34 @@
             <tbody>
               <tr>
                 <td>
-                    <a href="http://codepen.io/neotriz/full/QEWBLm/"><i class="fa fa-quote-left" aria-hidden="true"></i></a>
-                    <p>Random Quote Generator</p>
+                    <a href="http://codepen.io/neotriz/full/QEWBLm/"><i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <p>Random Quote Generator</p></a>
                 </td>
                 <td>
-                    <a href="http://codepen.io/neotriz/full/QEWeWP/"><i class="fa fa-sun-o" aria-hidden="true"></i></a>
-                    <p>Weather API</p>
+                    <a href="http://codepen.io/neotriz/full/QEWeWP/"><i class="fa fa-sun-o" aria-hidden="true"></i>
+                    <p>Weather API</p></a>
                 </td>
               </tr>
               <tr>
                 <td>
-                    <a href="http://codepen.io/neotriz/full/RRNBra/"><i class="fa fa-wikipedia-w" aria-hidden="true"></i></a>
-                    <p>Wikipedia Search API</p>
+                    <a href="http://codepen.io/neotriz/full/RRNBra/"><i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+                    <p>Wikipedia Search API</p></a>
                 </td>
                 <td>
-                    <a href="http://codepen.io/neotriz/full/wWKEvr"><i class="fa fa-twitch" aria-hidden="true"></i></a>
-                    <p>Twitch API</p>
+                    <a href="http://codepen.io/neotriz/full/wWKEvr"><i class="fa fa-twitch" aria-hidden="true"></i>
+                      <p>Twitch API</p></a>
                 </td>
               </tr>
               <tr>
                 <td>
-                    <a href="http://codepen.io/neotriz/full/vKGYEQ/"><i class="fa fa-calculator" aria-hidden="true"></i></a>
-                    <p>Calculator</p>
-                </td>
+                  <a href="http://codepen.io/neotriz/full/vKGYEQ/"><i class="fa fa-calculator" aria-hidden="true"></i>
+                    <p>Calculator</p></a>
+              </td>
                 <td>
-                    <a href="http://codepen.io/neotriz/full/NrrjBe"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-                    <p>Podomora Clock</p>
+                    <a href="http://codepen.io/neotriz/full/NrrjBe"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <p>Podomora Clock</p></a>
                 </td>
               </tr>
-              <tr>
                 <tr>
                   <td>
                       <i class="fa fa-hashtag" aria-hidden="true"></i>
@@ -107,6 +114,7 @@
                       <i class="fa fa-gamepad" aria-hidden="true"></i>
                       <p>Simon Game</p>
                 </tr>
+
             </tbody>
           </table>
         </div>
@@ -155,6 +163,21 @@
         drawer.classList.remove('open');
       });
 
+      //CSS Trick Code...Impressive!
+      $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
     </script>
   </body>
 </html>
