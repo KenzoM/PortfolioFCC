@@ -39,14 +39,14 @@ nav.open {
   color: white;
   text-shadow: 0.125rem 0.125rem 0.125rem #292929;
   text-decoration: none;
-  font-size: 4vw; }
+  font-size: 5vw; }
 
 #drawer ul {
   list-style: none; }
 
 #menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-right: 40px;
   margin: 0 auto; }
 
@@ -200,17 +200,6 @@ footer {
   nav {
     position: relative;
     transform: translate(0, 0); }
-  #drawer {
-    left: 0;
-    right: 0;
-    position: fixed; }
-    #drawer a {
-      font-size: 30px;
-      padding-left: 14px; }
-  #menu {
-    justify-content: flex-end; }
-    #menu li {
-      font-size: 10px; }
   main {
     flex-grow: 1; }
   #skills, #portfolio {

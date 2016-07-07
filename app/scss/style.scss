@@ -46,7 +46,7 @@ nav.open{
   color: white;
   text-shadow: 0.125rem 0.125rem 0.125rem #292929;
   text-decoration: none;
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 #drawer ul{
@@ -55,7 +55,7 @@ nav.open{
 
 #menu{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-right: 40px;
   margin: 0 auto;
 }
@@ -89,6 +89,10 @@ main{
     font-size: 78px;
     color: #4D7197;
     padding-bottom: 100px;
+    transition: color .4s ease-out;
+  }
+  .arrow:hover{
+    color:purple;
   }
   picture{
     width: 100%;
@@ -149,6 +153,7 @@ main{
     }
     td:hover{
       color: rgb(115, 24, 217);
+      background-color: #F9D8FB;
     }
   }
 }
@@ -234,6 +239,60 @@ footer{
     }
     picture{
       width: 100%;
+    }
+  }
+  #skills, #portfolio, #about{
+    font-size: 25px;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+  #bar{
+    display: none;
+  }
+  nav{
+    position: relative;
+    transform: translate(0, 0);
+  }
+
+  #drawer{
+    left: 0;
+    right: 0;
+    position: fixed;
+    a{
+      font-size: 30px;
+      padding-left: 14px;
+    }
+  }
+
+  #menu{
+    justify-content: flex-end;
+    li{
+      font-size: 10px;
+    }
+  }
+  main{
+    // padding-top: 5%;
+    flex-grow: 1;
+  }
+  #skills, #portfolio{
+    font-size: 45px;
+  }
+  #about{
+    font-size: 30px;
+  }
+  address img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+  footer{
+    font-size: 22px;
+    .social-media-buttons{
+      font-size: 43px;
+      .social-icons{
+        padding-left: 26px;
+      }
     }
   }
 }
